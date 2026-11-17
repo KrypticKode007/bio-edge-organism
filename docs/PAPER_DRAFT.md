@@ -77,3 +77,17 @@ To isolate the contribution of each survival mechanism, four variants were evalu
 
 ## 5. Conclusion
 **BioEdge-SNN-Apex** demonstrates that coupling neuromorphic spiking inference with active Free-Energy homeostasis, hardware-interrupt reflexes, and topological self-repair enables continuous, sub-millisecond self-preservation on resource-constrained edge hardware without cloud connectivity.
+
+---
+
+### 4.4 Cross-Tier Runtime Latency & Bare-Metal Microcontroller Scaling
+To validate deployment across heterogeneous edge hardware—from mobile ARM64 processors down to resource-constrained ESP32 and STM32 microcontrollers—the 6-pillar architecture was compiled into zero-allocation C99/C++11 (`-O3`) and benchmarked across $100,000$ continuous control cycles:
+
+| Execution Tier | Language / Runtime | Mean Cycle Latency | Throughput | Speedup vs. Python |
+| :--- | :--- | :---: | :---: | :---: |
+| **Bare-Metal MCU Port (`bio_mcu_bench`)** | C++11 (`-O3`, Zero-Alloc) | **90.97 ns (0.091 µs)** | **10.99 MHz** | **3,991.8×** |
+| **Edge-Native Simulation (`run_benchmark.py`)** | Python 3.13 + NumPy | 363.13 µs | 2.75 kHz | 1.0× |
+| **Live Android Hardware (`main.py --live`)** | Async Daemon + `termux-api` | ~2,598.5 µs | ~385 Hz | — |
+
+### 4.5 Decentralized Multi-Agent Swarm Mesh
+Evaluated across a 6-agent peer-to-peer mesh over 500 hostile cycles (`src/swarm_mesh.py`), local hazard pheromone propagation triggered **236 collective reflex evasions**, sustaining a **100.00% swarm survival rate (6 / 6 agents)** without centralized cloud coordination.

@@ -31,3 +31,14 @@ jobs:
 
       - name: Run Ablation Study Verification
         run: python experiments/ablation_study.py
+
+      - name: Run Decentralized Swarm Mesh Benchmark
+        run: python src/swarm_mesh.py
+
+      - name: Compile & Benchmark Bare-Metal C++11 MCU Firmware
+        run: |
+          mkdir -p build
+          g++ -O3 -std=c++11 firmware/esp32_stm32_port/main.cpp -lm -o build/bio_mcu_demo
+          g++ -O3 -std=c++11 firmware/esp32_stm32_port/bench_mcu.cpp -lm -o build/bio_mcu_bench
+          ./build/bio_mcu_demo
+          ./build/bio_mcu_bench
