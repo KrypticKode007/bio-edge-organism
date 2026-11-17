@@ -7,4 +7,5 @@ class ReflexArc:
         return telemetry["tissue_temp_c"] >= self.max_temp or telemetry["shock_g"] >= self.max_g
 
     def trigger_evasion(self, telemetry: dict) -> dict:
-        return {"cmd": "EMERGENCY_RECOIL_AND_SHIELD", "power_mw": 45.0}
+        reason = "THERMAL_SPIKE" if telemetry["tissue_temp_c"] >= self.max_temp else "KINETIC_IMPACT"
+        return {"cmd": f"REFLEX_EVASION_{reason}", "power_mw": 42.0, "spikes": 24}

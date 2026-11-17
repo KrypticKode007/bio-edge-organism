@@ -1,10 +1,16 @@
 organism:
-  name: "BioEdge-Alpha-01"
-  loop_hz: 20
+  name: "BioEdge-SNN-Apex"
+  loop_hz: 50
 homeostasis:
-  min_voltage: 3.3
+  min_voltage: 3.35
+  optimal_voltage: 4.00
   optimal_atp_level: 0.85
   critical_temp_c: 42.0
+  free_energy_threshold: 0.65
 reflex:
   hazard_temp_threshold_c: 45.0
-  shock_g_threshold: 2.5
+  shock_g_threshold: 2.2
+snn:
+  membrane_tau: 0.85
+  firing_threshold: 1.0
+  learning_rate: 0.02
