@@ -43,3 +43,16 @@ python experiments/run_benchmark.py
 
 * **Figure 1 (`docs/figures/fig1_homeostasis_trajectory.svg`):** 1,000-cycle ATP, voltage, and Free-Energy trajectories on ARM64 hardware.
 * **Figure 2 (`docs/figures/fig2_ablation_survival.svg`):** Comparative survival rates across ablated architectural variants.
+
+---
+
+## Live Terminal Telemetry Dashboard
+Launch the real-time Rich terminal UI to observe neural spike counts, Free-Energy drift, and fault rerouting live:
+```bash
+python src/dashboard.py --cycles 40
+# Or stream real Android accelerometer and battery sensors:
+python src/dashboard.py --live --cycles 60
+```
+
+## Citation
+If you build upon **BioEdge-SNN-Apex**, please use the **"Cite this repository"** button on GitHub (`CITATION.cff`).
