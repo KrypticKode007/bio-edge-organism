@@ -1,0 +1,38 @@
+[
+  {
+    "variant": "Full_6_Pillar_Organism",
+    "survived_cycles": 1000,
+    "survival_rate_pct": 100.0,
+    "mean_free_energy": 0.1909,
+    "intact_nodes_pct": 100.0,
+    "final_voltage": 4.0753,
+    "final_atp": 0.805
+  },
+  {
+    "variant": "No_Reflex_Arc",
+    "survived_cycles": 383,
+    "survival_rate_pct": 38.3,
+    "mean_free_energy": 0.4512,
+    "intact_nodes_pct": 100.0,
+    "final_voltage": 3.1499,
+    "final_atp": 0.943
+  },
+  {
+    "variant": "No_Self_Repair",
+    "survived_cycles": 46,
+    "survival_rate_pct": 4.6,
+    "mean_free_energy": 0.4606,
+    "intact_nodes_pct": 25.0,
+    "final_voltage": 3.1301,
+    "final_atp": 0.084
+  },
+  {
+    "variant": "No_Energy_Harvesting",
+    "survived_cycles": 97,
+    "survival_rate_pct": 9.7,
+    "mean_free_energy": 0.4296,
+    "intact_nodes_pct": 100.0,
+    "final_voltage": 3.4945,
+    "final_atp": 0.05
+  }
+]

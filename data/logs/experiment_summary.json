@@ -1,0 +1,12 @@
+{
+  "organism": "BioEdge-SNN-Apex",
+  "requested_cycles": 1000,
+  "survived_cycles": 1000,
+  "survival_rate_pct": 100.0,
+  "mean_edge_latency_us": 363.13,
+  "max_edge_latency_us": 13619.79,
+  "reflex_evasion_count": 74,
+  "autonomous_node_repairs": 31,
+  "final_voltage": 4.2402,
+  "final_atp": 0.805
+}
