@@ -56,3 +56,9 @@ python src/dashboard.py --live --cycles 60
 
 ## Citation
 If you build upon **BioEdge-SNN-Apex**, please use the **"Cite this repository"** button on GitHub (`CITATION.cff`).
+
+---
+
+## Embedded Microcontroller Firmware (`ESP32 / STM32`) & Swarm Mesh
+* **Bare-Metal C99 Port (`firmware/esp32_stm32_port/`):** Zero-allocation header implementing sub-5 µs hardware reflex interrupts, Free-Energy calculation, and LIF spiking inference for ESP32/STM32 MCUs.
+* **Decentralized Edge Swarm (`src/swarm_mesh.py`):** Peer-to-peer collective survival enabling hazard pheromone propagation and symbiotic ATP sharing without cloud infrastructure.

@@ -67,3 +67,18 @@ def test_pillar6_topological_self_repair():
     repaired = repair.reroute_pathways(damaged, bridge, silent=True)
     assert repaired == 2
     assert all(bridge.active_nodes.values())
+
+from swarm_mesh import DecentralizedSwarmMesh
+
+def test_swarm_mesh_symbiotic_survival():
+    swarm = DecentralizedSwarmMesh(num_agents=5, seed=7)
+    # Artificially starve one node and enrich another to verify P2P ATP sharing
+    swarm.agents[0].bridge.atp_nutrient = 0.95
+    swarm.agents[1].bridge.atp_nutrient = 0.40
+    stats = swarm.step_swarm()
+    assert stats["alive_agents"] == 5
+    assert swarm.symbiotic_transfers >= 1
+
+def test_c_firmware_header_exists():
+    assert os.path.exists("firmware/esp32_stm32_port/bio_edge_core.h")
+    assert os.path.exists("firmware/esp32_stm32_port/exported_weights.h")
