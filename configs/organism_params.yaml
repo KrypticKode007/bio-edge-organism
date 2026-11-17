@@ -1,0 +1,10 @@
+organism:
+  name: "BioEdge-Alpha-01"
+  loop_hz: 20
+homeostasis:
+  min_voltage: 3.3
+  optimal_atp_level: 0.85
+  critical_temp_c: 42.0
+reflex:
+  hazard_temp_threshold_c: 45.0
+  shock_g_threshold: 2.5
