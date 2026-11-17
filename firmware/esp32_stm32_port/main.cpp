@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "bio_edge_core.h"
 
-// Initialized with BioEdge-SNN-Apex trained synaptic matrix
 static LifSnnCore edge_snn = {
     .weights = {
         { 0.95f,  0.40f, -0.20f,  0.10f },
@@ -26,7 +25,7 @@ int main(void) {
 
     for (int cycle = 1; cycle <= 5; cycle++) {
         if (cycle == 3) {
-            sensor_bus.shock_g = 2.95f; // Simulated impact interrupt
+            sensor_bus.shock_g = 2.95f;
             sensor_bus.nodes[0] = false;
         } else {
             sensor_bus.shock_g = 0.10f;

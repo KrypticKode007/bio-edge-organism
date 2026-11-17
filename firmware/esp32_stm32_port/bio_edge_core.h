@@ -42,7 +42,7 @@ static inline float compute_free_energy(const BioTelemetry *t, uint8_t healthy_n
 }
 
 static inline OrganismCommand step_organism_bare_metal(LifSnnCore *snn, BioTelemetry *t, uint32_t *repairs_out) {
-    // Priority 1: Hardware-Interrupt Threat Reflex (< 5 microseconds on ESP32/STM32)
+    // Priority 1: Hardware-Interrupt Threat Reflex (< 1 microsecond on MCU)
     if (t->tissue_temp_c >= 45.0f || t->shock_g >= 2.2f) {
         return CMD_REFLEX_EVASION;
     }
