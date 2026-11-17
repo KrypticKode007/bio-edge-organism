@@ -35,3 +35,11 @@ python src/main.py --live --cycles 20
 # Execute 1,000-cycle hostile environment benchmark & export CSV/JSON
 python experiments/run_benchmark.py
 ```
+
+---
+
+## Automated Verification & Figures
+![Verification CI](https://github.com)
+
+* **Figure 1 (`docs/figures/fig1_homeostasis_trajectory.svg`):** 1,000-cycle ATP, voltage, and Free-Energy trajectories on ARM64 hardware.
+* **Figure 2 (`docs/figures/fig2_ablation_survival.svg`):** Comparative survival rates across ablated architectural variants.
